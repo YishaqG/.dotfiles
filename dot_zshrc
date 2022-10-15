@@ -7,8 +7,11 @@ then
   compinit
 fi
 
-# Poetry
-#export PATH="/Users/calcifer/.local/bin:$PATH"
+# If available set nvim as default editor
+if type nvim &>/dev/null
+then
+    export EDITOR="nvim"
+fi
 
 # Init shell prompt
 eval "$(starship init zsh)"
