@@ -1,0 +1,17 @@
+# Homebrew’s completions in zsh
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Poetry
+#export PATH="/Users/calcifer/.local/bin:$PATH"
+
+# Init shell prompt
+eval "$(starship init zsh)"
+
+# Startup script for -asdf- version manager 
+#. /opt/homebrew/opt/asdf/asdf.sh
