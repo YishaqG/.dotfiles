@@ -39,6 +39,11 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim' -- Easily install and manage LSP servers, DAP servers, linters, and formatters
   use 'williamboman/mason-lspconfig.nvim' -- Bridges mason.nvim with the lspconfig plugin
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+
+  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip' -- Snippets plugin
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
