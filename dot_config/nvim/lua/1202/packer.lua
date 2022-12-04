@@ -31,8 +31,14 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
   }
+  use 'williamboman/mason.nvim' -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+  use 'williamboman/mason-lspconfig.nvim' -- Bridges mason.nvim with the lspconfig plugin
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
