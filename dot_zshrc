@@ -17,4 +17,4 @@ fi
 eval "$(starship init zsh)"
 
 # Startup script for -asdf- version manager 
-#. /opt/homebrew/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
